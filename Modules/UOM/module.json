@@ -1,0 +1,13 @@
+{
+    "name": "UOM",
+    "alias": "uom",
+    "description": "",
+    "keywords": [],
+    "priority": 0,
+    "providers": [
+        "Modules\\UOM\\Providers\\UOMServiceProvider"
+    ],
+    "aliases": {},
+    "files": [],
+    "requires": []
+}

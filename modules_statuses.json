@@ -1,0 +1,10 @@
+{
+    "Article": true,
+    "Tag": true,
+    "Comment": true,
+    "Category": true,
+    "SubCategory": true,
+    "UOM": true,
+    "Store": true,
+    "Product": true
+}
