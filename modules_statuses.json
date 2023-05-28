@@ -7,5 +7,7 @@
     "UOM": true,
     "Store": true,
     "Product": true,
-    "RequestProduct": true
+    "RequestProduct": true,
+    "Route": true,
+    "RoutePath": true
 }

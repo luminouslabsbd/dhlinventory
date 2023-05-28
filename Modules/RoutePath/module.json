@@ -1,0 +1,13 @@
+{
+    "name": "RoutePath",
+    "alias": "routepath",
+    "description": "",
+    "keywords": [],
+    "priority": 0,
+    "providers": [
+        "Modules\\RoutePath\\Providers\\RoutePathServiceProvider"
+    ],
+    "aliases": {},
+    "files": [],
+    "requires": []
+}
