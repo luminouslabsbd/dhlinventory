@@ -65,6 +65,14 @@ Route::group(['namespace' => '\Modules\Report\Http\Controllers\Backend', 'as' =>
     $controller_name = 'ReportsController';
 
     Route::get("$module_name/report1", ['as' => "$module_name.report1", 'uses' => "$controller_name@report1"]);
+    Route::get("$module_name/report2", ['as' => "$module_name.report1", 'uses' => "$controller_name@report2"]);
+    Route::get("$module_name/report3", ['as' => "$module_name.report1", 'uses' => "$controller_name@report3"]);
+    Route::get("$module_name/report4", ['as' => "$module_name.report1", 'uses' => "$controller_name@report4"]);
+    Route::get("$module_name/report5", ['as' => "$module_name.report1", 'uses' => "$controller_name@report5"]);
+    Route::get("$module_name/report6", ['as' => "$module_name.report1", 'uses' => "$controller_name@report6"]);
+    Route::get("$module_name/report7", ['as' => "$module_name.report1", 'uses' => "$controller_name@report7"]);
+    Route::get("$module_name/report8", ['as' => "$module_name.report1", 'uses' => "$controller_name@report8"]);
+    Route::get("$module_name/report9", ['as' => "$module_name.report1", 'uses' => "$controller_name@report9"]);
 
     // Route::get('reports/report1', function () {
     //     return view('hello');
