@@ -6,5 +6,6 @@
     "SubCategory": true,
     "UOM": true,
     "Store": true,
-    "Product": true
+    "Product": true,
+    "Report": true
 }
