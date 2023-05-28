@@ -124,12 +124,15 @@ class BackendBaseController extends Controller
         $data = $$module_name;
 
         return Datatables::of($$module_name)
+        
             ->addColumn('action', function ($data) {
-                $module_name = $this->module_name;
-
-                return view('backend.includes.action_column', compact('module_name', 'data'));
+                
+                    $module_name = $this->module_name;
+                    return view('backend.includes.action_column', compact('module_name', 'data'));
             })
+            
             ->editColumn('name', '<strong>{{$name}}</strong>')
+            
             ->editColumn('updated_at', function ($data) {
                 $module_name = $this->module_name;
 

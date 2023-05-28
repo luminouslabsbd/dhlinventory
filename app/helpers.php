@@ -1,10 +1,11 @@
 <?php
 
-use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Str;
+use Modules\UOM\Models\UOM;
+use Illuminate\Support\Facades\Log;
+use Modules\Product\Models\Product;
 use Modules\Category\Models\Category;
 use Modules\SubCategory\Models\SubCategory;
-use Modules\UOM\Models\UOM;
 
 /*
  * Global helpers file with misc functions.
@@ -540,5 +541,11 @@ if (!function_exists('UnitId')) {
     function UnitId()
     {
         return UOM::get();
+    }
+}
+if (!function_exists('ProductId')) {
+    function ProductId()
+    {
+        return Product::get();
     }
 }

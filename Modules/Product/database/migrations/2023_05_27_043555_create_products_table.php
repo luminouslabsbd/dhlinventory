@@ -26,8 +26,10 @@ return new class extends Migration
 
             $table->string('name');
             $table->integer('price');
+            $table->integer('qty');
             $table->string('slug')->nullable();
             $table->text('description')->nullable();
+            $table->tinyInteger('accept')->default(0);
             $table->tinyInteger('status')->default(1);
 
             $table->integer('created_by')->unsigned()->nullable();
