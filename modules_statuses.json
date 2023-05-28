@@ -10,4 +10,6 @@
     "RequestProduct": true,
     "Route": true,
     "RoutePath": true
+    "RequestProduct": true,
+    "Report": true
 }
