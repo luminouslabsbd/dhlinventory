@@ -2,8 +2,10 @@
 
 namespace Database\Seeders;
 
+// use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+use App\Models\Vehicle;
+use App\Models\Vendor;
 use Illuminate\Database\Seeder;
-use Illuminate\Support\Facades\Schema;
 
 class DatabaseSeeder extends Seeder
 {
@@ -12,10 +14,15 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        Schema::disableForeignKeyConstraints();
+       $this->call(UserTableSeeder::class);
+       $this->call(CategoryTableSeeder::class);
+       $this->call(RolePermissionTableSeeder::class);
+       $this->call(UomTableSeeder::class);
+       $this->call(RouteTableSeeder::class);
+       $this->call(VendorTableSeeder::class);
+       $this->call(SubCategoryTableSeeder::class);
+       $this->call(ProductTableSeeder::class);
+       $this->call(VehicleTableSeeder::class);
 
-        $this->call(AuthTableSeeder::class);
-
-        Schema::enableForeignKeyConstraints();
     }
 }
