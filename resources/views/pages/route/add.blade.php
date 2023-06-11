@@ -17,14 +17,14 @@
                 <div class="card-body">
                     <div class="row">
                         <div class="col-12">
-                            <input type="text" name="name" class="form-control" placeholder="Route Name">
+                            <input type="text" name="name" class="form-control" placeholder="Route Name" required>
                         </div>
                     </div>
                 </div>
                 <div class="card-body">
                     <div class="row">
                         <div class="col-12">
-                            <input type="text" name="code" class="form-control" placeholder="Route Code">
+                            <input type="text" name="code" class="form-control" placeholder="Route Code" required>
                         </div>
                     </div>
                 </div>

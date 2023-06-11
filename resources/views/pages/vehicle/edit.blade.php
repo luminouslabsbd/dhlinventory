@@ -30,28 +30,28 @@
                             <div class="card-body">
                                 <div class="row">
                                     <div class="col-12">
-                                        <input type="text" name="vehicle_name" class="form-control" placeholder="Vehicle Name" value="{{ $edit->vehicle_name }}">
+                                        <input type="text" name="vehicle_name" class="form-control" placeholder="Vehicle Name" value="{{ $edit->vehicle_name }}" required>
                                     </div>
                                 </div>
                             </div>
                             <div class="card-body">
                                 <div class="row">
                                     <div class="col-12">
-                                        <input type="text" name="vehicle_cc" class="form-control" placeholder="Vehicle CC" value="{{ $edit->vehicle_cc }}">
+                                        <input type="text" name="vehicle_cc" class="form-control" placeholder="Vehicle CC" value="{{ $edit->vehicle_cc }}" required>
                                     </div>
                                 </div>
                             </div>
                             <div class="card-body">
                                 <div class="row">
                                     <div class="col-12">
-                                        <input type="text" name="vehicle_engine_number" class="form-control" placeholder="Vehicle Engine Number" value="{{ $edit->vehicle_engine_number }}">
+                                        <input type="text" name="vehicle_engine_number" class="form-control" placeholder="Vehicle Engine Number" value="{{ $edit->vehicle_engine_number }}" required>
                                     </div>
                                 </div>
                             </div>
                             <div class="card-body">
                                 <div class="row">
                                     <div class="col-12">
-                                        <input type="text" name="vehicle_chassis_number" class="form-control" placeholder="Vehicle Chassis Number" value="{{ $edit->vehicle_chassis_number }}">
+                                        <input type="text" name="vehicle_chassis_number" class="form-control" placeholder="Vehicle Chassis Number" value="{{ $edit->vehicle_chassis_number }}" required>
                                     </div>
                                 </div>
                             </div>

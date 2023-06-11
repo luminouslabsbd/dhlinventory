@@ -19,7 +19,7 @@
                     <div class="row">
                         <div class="col-3">
                             <label>Vendor Name</label>
-                            <select class="form-select" name="vendor_id">
+                            <select class="form-select" name="vendor_id" required>
                                 @foreach ($vendors as $item)
                                     <option value="{{$item->id}}">{{$item->vendor_name}}</option>
                                 @endforeach
@@ -27,7 +27,7 @@
                         </div>
                         <div class="col-3">
                             <label>Category Name</label>
-                            <select class="form-select" name="category_id">
+                            <select class="form-select" name="category_id" required>
                                 @foreach ($categories as $item)
                                     <option value="{{$item->id}}">{{$item->name}}</option>
                                 @endforeach
@@ -35,7 +35,7 @@
                         </div>
                         <div class="col-3">
                             <label>Sub Category Name</label>
-                            <select class="form-select" name="sub_category_id">
+                            <select class="form-select" name="sub_category_id" required>
                                 @foreach ($subcategories as $item)
                                     <option value="{{$item->id}}">{{$item->name}}</option>
                                 @endforeach
@@ -43,7 +43,7 @@
                         </div>
                         <div class="col-3">
                             <label>UOM</label>
-                            <select class="form-select" name="uom_id">
+                            <select class="form-select" name="uom_id" required>
                                 @foreach ($uoms as $item)
                                     <option value="{{$item->id}}">{{$item->name}}</option>
                                 @endforeach
@@ -55,13 +55,13 @@
                 <div class="card-body">
                     <div class="row">
                         <div class="col-4">
-                            <input type="text" name="name" value="{{$edit->name}}" class="form-control" placeholder="Product Name">
+                            <input type="text" name="name" value="{{$edit->name}}" class="form-control" placeholder="Product Name" required>
                         </div>
                         <div class="col-4">
-                            <input type="number" name="price" value="{{$edit->price}}" class="form-control" placeholder="Price">
+                            <input type="number" name="price" value="{{$edit->price}}" class="form-control" placeholder="Price" required>
                         </div>
                         <div class="col-4">
-                            <input type="number" name="qty" value="{{$edit->qty}}" class="form-control" placeholder="Quantity">
+                            <input type="number" name="qty" value="{{$edit->qty}}" class="form-control" placeholder="Quantity" required>
                         </div>
                     </div>
                 </div>

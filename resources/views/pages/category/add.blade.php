@@ -17,10 +17,10 @@
                 <div class="card-body">
                     <div class="row">
                         <div class="col-6">
-                            <input type="text" name="name" class="form-control" placeholder="Category Name">
+                            <input type="text" name="name" class="form-control" placeholder="Category Name" required>
                         </div>
                         <div class="col-6">
-                            <select name="users[]" class="select2" multiple="multiple" data-placeholder="Select a user" style="width: 100%;">
+                            <select name="users[]" class="select2" multiple="multiple" data-placeholder="Select a user" style="width: 100%;" required>
                                 @foreach($users as $user)
                                     <option value="{{$user->id}}">{{$user->full_name}}</option>
                                 @endforeach

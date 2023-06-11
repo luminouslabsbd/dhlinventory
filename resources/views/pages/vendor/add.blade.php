@@ -17,49 +17,49 @@
                 <div class="card-body">
                     <div class="row">
                         <div class="col-12">
-                            <input type="text" name="sap_vendor_code" class="form-control" placeholder="SAP Vendor Code">
+                            <input type="text" name="sap_vendor_code" class="form-control" placeholder="SAP Vendor Code" required>
                         </div>
                     </div>
                 </div>
                 <div class="card-body">
                     <div class="row">
                         <div class="col-12">
-                            <input type="text" name="get_vendor_code" class="form-control" placeholder="Get Vendor Code">
+                            <input type="text" name="get_vendor_code" class="form-control" placeholder="Get Vendor Code" required>
                         </div>
                     </div>
                 </div>
                 <div class="card-body">
                     <div class="row">
                         <div class="col-12">
-                            <input type="text" name="vendor_name" class="form-control" placeholder="Vendor's Name">
+                            <input type="text" name="vendor_name" class="form-control" placeholder="Vendor's Name" required>
                         </div>
                     </div>
                 </div>
                 <div class="card-body">
                     <div class="row">
                         <div class="col-12">
-                            <input type="text" name="vendor_address" class="form-control" placeholder="Vendor's Address">
+                            <input type="text" name="vendor_address" class="form-control" placeholder="Vendor's Address" required>
                         </div>
                     </div>
                 </div>
                 <div class="card-body">
                     <div class="row">
                         <div class="col-12">
-                            <input type="text" name="contact_person_name" class="form-control" placeholder="Contact Person's Name">
+                            <input type="text" name="contact_person_name" class="form-control" placeholder="Contact Person's Name" required>
                         </div>
                     </div>
                 </div>
                 <div class="card-body">
                     <div class="row">
                         <div class="col-12">
-                            <input type="text" name="contact_number" class="form-control" placeholder="Contact Number">
+                            <input type="number" name="contact_number" class="form-control" placeholder="Contact Number" required>
                         </div>
                     </div>
                 </div>
                 <div class="card-body">
                     <div class="row">
                         <div class="col-12">
-                            <input type="text" name="contact_email" class="form-control" placeholder="Contact Email">
+                            <input type="email" name="contact_email" class="form-control" placeholder="Contact Email" required>
                         </div>
                     </div>
                 </div>

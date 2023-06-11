@@ -51,7 +51,7 @@
                                         @if($data->admin_set_quantity == ISSUE_PARTIAL_QUANTITY)
                                             <div class="col-4 partialQuantityShow">
                                                 <label>Product Name</label>
-                                                <input type="text" name="partial_quantity" class="form-control" placeholder="quantity">
+                                                <input type="number" name="partial_quantity" class="form-control" placeholder="quantity" required>
                                             </div>
                                         @endif
                                         <div class="col-4">

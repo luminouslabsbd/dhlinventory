@@ -43,7 +43,7 @@
                 <div class="card-body">
                     <div class="row">
                         <div class="col-12">
-                            <input type="text" name="quantity" class="form-control" placeholder="quantity">
+                            <input type="number" name="quantity" class="form-control" placeholder="quantity" required>
                         </div>
                     </div>
                 </div>

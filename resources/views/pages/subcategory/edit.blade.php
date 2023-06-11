@@ -19,7 +19,7 @@
                     <div class="row">
                         <div class="col-12">
                             <label>Category Name</label>
-                            <select class="form-select" name="category_id">
+                            <select class="form-select" name="category_id" required>
                                 @foreach ($categories as $category)
                                     <option value="{{$category->id}}" {{$edit->category->id == $category->id ? "selected" : ""}}>{{$category->name}}</option>
                                 @endforeach
@@ -30,7 +30,7 @@
                 <div class="card-body">
                     <div class="row">
                         <div class="col-12">
-                            <input type="text" name="name" value="{{$edit->name}}" class="form-control">
+                            <input type="text" name="name" value="{{$edit->name}}" class="form-control" required>
                         </div>
                     </div>
                 </div>

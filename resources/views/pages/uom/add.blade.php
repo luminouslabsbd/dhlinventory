@@ -17,7 +17,7 @@
                 <div class="card-body">
                     <div class="row">
                         <div class="col-12">
-                            <input type="text" name="name" class="form-control" placeholder="UOM Name">
+                            <input type="text" name="name" class="form-control" placeholder="UOM Name" required>
                         </div>
                     </div>
                 </div>

@@ -29,28 +29,28 @@
                 <div class="card-body">
                     <div class="row">
                         <div class="col-12">
-                            <input type="text" name="vehicle_name" class="form-control" placeholder="Vehicle Name">
+                            <input type="text" name="vehicle_name" class="form-control" placeholder="Vehicle Name" required>
                         </div>
                     </div>
                 </div>
                 <div class="card-body">
                     <div class="row">
                         <div class="col-12">
-                            <input type="text" name="vehicle_cc" class="form-control" placeholder="Vehicle CC">
+                            <input type="text" name="vehicle_cc" class="form-control" placeholder="Vehicle CC" required>
                         </div>
                     </div>
                 </div>
                 <div class="card-body">
                     <div class="row">
                         <div class="col-12">
-                            <input type="text" name="vehicle_engine_number" class="form-control" placeholder="Vehicle Engine Number">
+                            <input type="text" name="vehicle_engine_number" class="form-control" placeholder="Vehicle Engine Number" required>
                         </div>
                     </div>
                 </div>
                 <div class="card-body">
                     <div class="row">
                         <div class="col-12">
-                            <input type="text" name="vehicle_chassis_number" class="form-control" placeholder="Vehicle Chassis Number">
+                            <input type="text" name="vehicle_chassis_number" class="form-control" placeholder="Vehicle Chassis Number" required>
                         </div>
                     </div>
                 </div>
