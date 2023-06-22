@@ -30,7 +30,7 @@
           <li class="user-body">
             <div class="row">
               <div class="col-4 text-center">
-                <a href="#" class="btn btn-block btn-success">Profile</a>
+                <a href="{{route('backend.profile')}}" class="btn btn-block btn-success">Profile</a>
               </div>
               <div class="col-4 text-center">
                 <a href="{{route('backend.lock')}}" class="btn btn-block btn-info">Lock</a>

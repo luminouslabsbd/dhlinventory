@@ -38,6 +38,8 @@ Route::post('admin/login', [AuthController::class,'loginDashboard'])->name('logi
 Route::group(['prefix' => 'admin','middleware' => ['auth','prevent-back-history'],'as' =>'backend.'],function() {
     Route::get('dashboard', [DashboardController::class, 'adminDashboard'])->name('dashboard');
     Route::get('logout', [AuthController::class, 'logout'])->name('logout');
+    Route::get('profile', [AuthController::class, 'profile'])->name('profile');
+
     Route::get('lock', [AuthController::class, 'lock'])->name('lock');
     Route::post('lock', [AuthController::class, 'unlock'])->name('unlock');
 

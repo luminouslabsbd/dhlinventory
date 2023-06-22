@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Session;
 use Brian2694\Toastr\Facades\Toastr;
@@ -44,6 +45,7 @@ class AuthController extends Controller
         return redirect()->back();
     }
     public function lock(){
+        
         if (Auth::check()) {
             $authEmail=Auth::user()->email;
             Session::put('authEmail', $authEmail);
@@ -53,6 +55,8 @@ class AuthController extends Controller
     }
 
     public function unlock(Request $request){
+       // dd($request->all());
+
         $sessionEmail = Session::get('authEmail');
         $authEmail=Auth::user()->email;
         $authPassword=Auth::user()->password;
@@ -65,5 +69,19 @@ class AuthController extends Controller
             Toastr::success('', 'Login Successfully', ["positionClass" => "toast-bottom-right"]);
             return redirect()->route('backend.dashboard');
         }
+    }
+
+    public function profile(Request $request){
+
+      //  dd($request->all());
+        $userId=Auth::user()->id;
+       // $authEmail=Auth::user()->full_name;
+
+        $data=DB::table('users')->where('id',$userId)->first();
+
+
+       // dd($data->id);
+        return view('pages.auth.profile',compact('data'));
+
     }
 }
