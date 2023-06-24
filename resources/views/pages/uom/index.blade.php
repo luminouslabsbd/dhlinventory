@@ -58,6 +58,8 @@
                 "info": true,
                 "autoWidth": false,
                 "responsive": true,
+                processing: true,
+                serverSide: true,
                 ajax: {
                     url: "{{route('backend.uom')}}",
                 },
