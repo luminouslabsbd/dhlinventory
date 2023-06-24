@@ -63,6 +63,7 @@
                 processing: true,
                 serverSide: true,
                 ajax: {
+                    type: 'GET',
                     url: "{{route('backend.request.product.commercial')}}",
                 },
                 columns: [
