@@ -126,15 +126,15 @@ Route::group(['prefix' => 'admin','middleware' => ['auth','prevent-back-history'
 
     Route::group(['prefix' => 'request-product' ],function (){
         Route::get('/request', [RequestProductController::class, 'requestProduct'])->name('request.product');
-        Route::get('commercial/request/product', [RequestProductController::class, 'commercialRequestProduct'])->name('request.product.commercial');
-        Route::get('/approved/product', [RequestProductController::class, 'requestProductApproved'])->name('request.product.approved');
+        Route::get('commercial', [RequestProductController::class, 'commercialRequestProduct'])->name('request.product.commercial');
+        Route::get('/approved/', [RequestProductController::class, 'requestProductApproved'])->name('request.product.approved');
         Route::get('/create', [RequestProductController::class, 'requestProductCreate'])->name('request.product.create');
         Route::post('/create', [RequestProductController::class, 'requestProductStore'])->name('request.product.store');
         Route::get('/active/{id}', [RequestProductController::class, 'requestProductActive'])->name('request.product.status.active');
-        Route::get('/request/product/qty/check/{id}', [RequestProductController::class, 'requestProductQtyCheck'])->name('request.product.qty.check');
+        Route::get('/qty/check/{id}', [RequestProductController::class, 'requestProductQtyCheck'])->name('request.product.qty.check');
         Route::post('/product/preview/store', [RequestProductController::class, 'requestProductPreview'])->name('request.product.preview.store');
-        Route::post('/product/approved-or-rejected', [RequestProductController::class, 'requestProductApprovedOrRejected'])->name('request.product.approved.or.rejected');
-        Route::get('/product/rejected/{id}', [RequestProductController::class, 'requestProductRejected'])->name('request.product.rejected');
+        Route::post('/approved-or-rejected', [RequestProductController::class, 'requestProductApprovedOrRejected'])->name('request.product.approved.or.rejected');
+        Route::get('/rejected/{id}', [RequestProductController::class, 'requestProductRejected'])->name('request.product.rejected');
     });
 
     Route::group(['prefix' => 'reports' ],function (){
