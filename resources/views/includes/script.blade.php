@@ -1,10 +1,12 @@
-<script src="{{asset('assets/plugins/jquery/jquery.min.js')}}"></script>
+{{--<script src="{{asset('assets/plugins/jquery/jquery.min.js')}}"></script>--}}
+<script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
 
-<script src="{{asset('assets/plugins/jquery-ui/jquery-ui.min.js')}}"></script>
 
-<script>
-  $.widget.bridge('uibutton', $.ui.button)
-</script>
+{{--<script src="{{asset('assets/plugins/jquery-ui/jquery-ui.min.js')}}"></script>--}}
+
+{{--<script>--}}
+{{--  $.widget.bridge('uibutton', $.ui.button)--}}
+{{--</script>--}}
 
 
 <script src="{{asset('assets/plugins/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
@@ -15,12 +17,12 @@
 <script src="{{asset('assets/plugins/datatables-responsive/js/responsive.bootstrap4.min.js')}}"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
 
-{{-- <script src="https://cdn.datatables.net/1.10.23/js/jquery.dataTables.min.js"></script>
-<script src="https://cdn.datatables.net/buttons/1.6.5/js/dataTables.buttons.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/pdfmake.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/vfs_fonts.js"></script>
-<script src="https://cdn.datatables.net/buttons/1.6.5/js/buttons.html5.min.js"></script> --}}
+{{-- <script src="https://cdn.datatables.net/1.10.23/js/jquery.dataTables.min.js"></script>--}}
+{{--<script src="https://cdn.datatables.net/buttons/1.6.5/js/dataTables.buttons.min.js"></script>--}}
+{{--<script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js"></script>--}}
+{{--<script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/pdfmake.min.js"></script>--}}
+{{--<script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/vfs_fonts.js"></script>--}}
+{{--<script src="https://cdn.datatables.net/buttons/1.6.5/js/buttons.html5.min.js"></script> --}}
 
 <script src="{{asset('assets/plugins/jquery-knob/jquery.knob.min.js')}}"></script>
 
