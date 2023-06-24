@@ -125,9 +125,9 @@ Route::group(['prefix' => 'admin','middleware' => ['auth','prevent-back-history'
     });
 
     Route::group(['prefix' => 'request-product' ],function (){
-        Route::get('/request/', [RequestProductController::class, 'requestProduct'])->name('request.product');
-        Route::get('/commercial/', [RequestProductController::class, 'commercialRequestProduct'])->name('request.product.commercial');
-        Route::get('/approved/', [RequestProductController::class, 'requestProductApproved'])->name('request.product.approved');
+        Route::get('/request', [RequestProductController::class, 'requestProduct'])->name('request.product');
+        Route::get('/commercial', [RequestProductController::class, 'commercialRequestProduct'])->name('request.product.commercial');
+        Route::get('/approved', [RequestProductController::class, 'requestProductApproved'])->name('request.product.approved');
         Route::get('/create', [RequestProductController::class, 'requestProductCreate'])->name('request.product.create');
         Route::post('/create', [RequestProductController::class, 'requestProductStore'])->name('request.product.store');
         Route::get('/active/{id}', [RequestProductController::class, 'requestProductActive'])->name('request.product.status.active');
