@@ -12,3 +12,11 @@ if (!function_exists('selectJobType')) {
         return null;
     }
 }
+
+
+if (!function_exists('categoryWiseNotifyShow')) {
+    function categoryWiseNotifyShow()
+    {
+        return DB::table('categories_wise_user')->where('user_id', auth()->user()->id)->where('notify',NOTIFY_SHOW)->get();
+    }
+}

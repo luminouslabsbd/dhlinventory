@@ -9,3 +9,6 @@ const ON_THE_WAY = 3;
 const ISSUE_FULL_QUANTITY  =   1;
 const ISSUE_PARTIAL_QUANTITY = 2;
 const ISSUE_BALANCE_QUANTITY = 3;
+
+const NOTIFY_SHOW = 1;
+const NOTIFY_HIDE = 0;

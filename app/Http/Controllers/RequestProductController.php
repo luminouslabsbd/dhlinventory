@@ -169,12 +169,10 @@ class RequestProductController extends Controller
     }
 
     public function requestProductStore(Request $request)
-    {   
-        // $role = Role::findByName('SuperAdmin')->first();
-        // $user=DB::table('users')->get();
-        // // $user->assignRole($role);
-        // dd($user[0]->assignRole($role));
-
+    {
+        DB::table('categories_wise_user')->where('category_id', $request->category_id)->update([
+            'notify' => 1
+        ]);
 
         RequestProduct::create([
             'product_id' => $request->product_id,
@@ -182,7 +180,8 @@ class RequestProductController extends Controller
             'quantity' => $request->quantity,
             'user_id' => Auth::id(),
         ]);
-      //  dd("fgh");
+
+
       Toastr::success('', 'Request Successfully Added', ["positionClass" => "toast-top-right"]);
 
         return redirect()->route('backend.request.product.commercial');
@@ -290,7 +289,7 @@ class RequestProductController extends Controller
 
     public function getProductQuantity(Request $request){
         if ($request->ajax()) {
-            $stock = Product::where('id',$request->product_id)->first()->qty;
+            $stock = Product::where('id',$request->product_id)->first();
             return response()->json($stock);
         }
     }
