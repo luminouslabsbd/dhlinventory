@@ -287,24 +287,6 @@ class RequestProductController extends Controller
             return redirect()->back();
         }
     }
-    public function messageStatus1($text,$image,$reply){
-        if($text == 0 && $image == 1 && $reply == 1){
-            return 'iSentText';
-        }
-        if($text == 1 && $image == 0 && $reply == 1){
-            return 'iSentImage';
-        }
-        if($text == 0 && $image == 0 && $reply == 1){
-            return 'iSentTextWithiSentImage';
-        }
-        if($text == 0 && $image == 1 && $reply == 0){
-            return ' iSentReplyWithiSentText';
-        }
-        if($text == 1 && $image == 0 && $reply == 0){
-            return 'iSentReplyWithiSentImage';
-        }
-        if($text == 0 && $image == 0 && $reply == 0){
-            return ' iSentReplyWithiSentTextWithiSentImage';
-        }
-    }
+   
+    
 }
