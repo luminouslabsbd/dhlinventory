@@ -135,6 +135,10 @@ Route::group(['prefix' => 'admin','middleware' => ['auth','prevent-back-history'
         Route::post('/product/preview/store', [RequestProductController::class, 'requestProductPreview'])->name('request.product.preview.store');
         Route::post('/approved-or-rejected', [RequestProductController::class, 'requestProductApprovedOrRejected'])->name('request.product.approved.or.rejected');
         Route::get('/rejected/{id}', [RequestProductController::class, 'requestProductRejected'])->name('request.product.rejected');
+
+
+        //get product quantity
+        Route::get('/get-product-quantity', [RequestProductController::class, 'getProductQuantity'])->name('get.product.stock');
     });
 
     Route::group(['prefix' => 'reports' ],function (){

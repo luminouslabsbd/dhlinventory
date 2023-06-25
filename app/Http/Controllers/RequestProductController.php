@@ -277,4 +277,11 @@ class RequestProductController extends Controller
             return redirect()->back();
         }
     }
+
+    public function getProductQuantity(Request $request){
+        if ($request->ajax()) {
+            $stock = Product::where('id',$request->product_id)->first()->qty;
+            return response()->json($stock);
+        }
+    }
 }
