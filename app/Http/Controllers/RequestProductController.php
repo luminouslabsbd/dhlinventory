@@ -11,6 +11,7 @@ use Brian2694\Toastr\Facades\Toastr;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
+use Spatie\Permission\Models\Role;
 use Yajra\DataTables\DataTables;
 use App\Mail\SendMail;
 use Illuminate\Support\Facades\Mail;
@@ -168,14 +169,23 @@ class RequestProductController extends Controller
     }
 
     public function requestProductStore(Request $request)
-    {
+    {   
+        // $role = Role::findByName('SuperAdmin')->first();
+        // $user=DB::table('users')->get();
+        // // $user->assignRole($role);
+        // dd($user[0]->assignRole($role));
+
+
         RequestProduct::create([
             'product_id' => $request->product_id,
             'route_id' => $request->route_id,
             'quantity' => $request->quantity,
             'user_id' => Auth::id(),
         ]);
-        return redirect()->route('backend.request.product.create');
+      //  dd("fgh");
+      Toastr::success('', 'Request Successfully Added', ["positionClass" => "toast-top-right"]);
+
+        return redirect()->route('backend.request.product.commercial');
     }
 
     public function requestProductActive($id){
@@ -277,7 +287,6 @@ class RequestProductController extends Controller
             return redirect()->back();
         }
     }
-
     public function getProductQuantity(Request $request){
         if ($request->ajax()) {
             $stock = Product::where('id',$request->product_id)->first()->qty;

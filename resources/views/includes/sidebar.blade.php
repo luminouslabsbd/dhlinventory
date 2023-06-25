@@ -14,6 +14,7 @@
               </p>
             </a>
           </li>
+          @if (Auth::user()->hasRole('superAdmin'))
             <li class="nav-item">
                 <a href="{{route('backend.route')}}" class="nav-link {{Route::is('backend.route*') ? "active" : ""}}">
                     <i class="nav-icon fas fa-th"></i>
@@ -22,6 +23,7 @@
                     </p>
                 </a>
             </li>
+            @endif
             <li class="nav-item">
                 <a href="{{route('backend.vendor')}}" class="nav-link {{Route::is('backend.vendor*') ? "active" : ""}}">
                     <i class="nav-icon fas fa-th"></i>
