@@ -11,6 +11,7 @@ use Brian2694\Toastr\Facades\Toastr;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
+use Spatie\Permission\Models\Role;
 use Yajra\DataTables\DataTables;
 use App\Mail\SendMail;
 use Illuminate\Support\Facades\Mail;
@@ -168,7 +169,13 @@ class RequestProductController extends Controller
     }
 
     public function requestProductStore(Request $request)
-    {
+    {   
+        // $role = Role::findByName('SuperAdmin')->first();
+        // $user=DB::table('users')->get();
+        // // $user->assignRole($role);
+        // dd($user[0]->assignRole($role));
+
+
         RequestProduct::create([
             'product_id' => $request->product_id,
             'route_id' => $request->route_id,
@@ -176,6 +183,8 @@ class RequestProductController extends Controller
             'user_id' => Auth::id(),
         ]);
       //  dd("fgh");
+      Toastr::success('', 'Request Successfully Added', ["positionClass" => "toast-top-right"]);
+
         return redirect()->route('backend.request.product.commercial');
     }
 
@@ -276,6 +285,26 @@ class RequestProductController extends Controller
                 'status' => ON_THE_WAY,
             ]);
             return redirect()->back();
+        }
+    }
+    public function messageStatus1($text,$image,$reply){
+        if($text == 0 && $image == 1 && $reply == 1){
+            return 'iSentText';
+        }
+        if($text == 1 && $image == 0 && $reply == 1){
+            return 'iSentImage';
+        }
+        if($text == 0 && $image == 0 && $reply == 1){
+            return 'iSentTextWithiSentImage';
+        }
+        if($text == 0 && $image == 1 && $reply == 0){
+            return ' iSentReplyWithiSentText';
+        }
+        if($text == 1 && $image == 0 && $reply == 0){
+            return 'iSentReplyWithiSentImage';
+        }
+        if($text == 0 && $image == 0 && $reply == 0){
+            return ' iSentReplyWithiSentTextWithiSentImage';
         }
     }
 }
