@@ -175,7 +175,8 @@ class RequestProductController extends Controller
             'quantity' => $request->quantity,
             'user_id' => Auth::id(),
         ]);
-        return redirect()->route('backend.request.product.create');
+      //  dd("fgh");
+        return redirect()->route('backend.request.product.commercial');
     }
 
     public function requestProductActive($id){
