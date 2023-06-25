@@ -70,7 +70,6 @@
                         product_id:product_id
                     },
                     success:function (data) {
-                        console.log(data)
                         $("#stock_quantity").val(data);
                     }
                 })
