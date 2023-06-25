@@ -38,6 +38,21 @@
                     </p>
                 </a>
             </li>
+            <li class="nav-item">
+                <a href="{{route('backend.request.product')}}" class="nav-link {{Route::is('backend.request.product') || Route::is('backend.request.product.status.active*') ? "active" : ""}}">
+                    <i class="nav-icon fas fa-th"></i>
+                    <p>
+                        Product Approval
+                    </p>
+                </a>
+            </li>            <li class="nav-item">
+                <a href="{{route('backend.request.product.approved')}}" class="nav-link {{Route::is('backend.request.product.approved*') || Route::is('backend.request.product.qty.check*') ? "active" : ""}}">
+                    <i class="nav-icon fas fa-th"></i>
+                    <p>
+                        Central Store
+                    </p>
+                </a>
+            </li>
 
             {{-- menu-open --}}
 
@@ -85,39 +100,56 @@
                 </ul>
             </li>
 
-            <li class="nav-item {{Route::is('backend.request.product*')  ? "menu-open" : ""}}">
-                <a href="#" class="nav-link {{Route::is('backend.request.product.commercial*') || Route::is('backend.request.product*') || Route::is('backend.request.product.approved*')  ? "active" : ""}}">
+            <li class="nav-item {{Route::is('backend.request.product.commercial')  ? "menu-open" : ""}}">
+                <a href="#" class="nav-link {{Route::is('backend.request.product.commercial*')   ? "active" : ""}}">
                     <i class="nav-icon fas fa-tachometer-alt"></i>
                     <p>
-                        Request Products
+                        Request Requisition
                         <i class="right fas fa-angle-left"></i>
                     </p>
                 </a>
                 <ul class="nav nav-treeview">
+                    
                     <li class="nav-item">
                         <a href="{{route('backend.request.product.commercial')}}" class="nav-link {{Route::is('backend.request.product.commercial*') || Route::is('backend.request.product.create*') ? "active" : ""}}">
                             <i class="nav-icon fas fa-th"></i>
                             <p>
-                                Commercial
+                                Non Retail
                             </p>
                         </a>
                     </li>
                     <li class="nav-item">
+                        <a href="#" class="nav-link ">
+                            <i class="nav-icon fas fa-th"></i>
+                            <p>
+                                Retail
+                            </p>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link ">
+                            <i class="nav-icon fas fa-th"></i>
+                            <p>
+                                Service Center
+                            </p>
+                        </a>
+                    </li>
+                    {{-- <li class="nav-item">
                         <a href="{{route('backend.request.product')}}" class="nav-link {{Route::is('backend.request.product') || Route::is('backend.request.product.status.active*') ? "active" : ""}}">
                             <i class="nav-icon fas fa-th"></i>
                             <p>
                                 Product Review
                             </p>
                         </a>
-                    </li>
-                    <li class="nav-item">
+                    </li> --}}
+                    {{-- <li class="nav-item">
                         <a href="{{route('backend.request.product.approved')}}" class="nav-link {{Route::is('backend.request.product.approved*') || Route::is('backend.request.product.qty.check*') ? "active" : ""}}">
                             <i class="nav-icon fas fa-th"></i>
                             <p>
                                Approved Product
                             </p>
                         </a>
-                    </li>
+                    </li> --}}
                 </ul>
             </li>
 
