@@ -16,7 +16,7 @@
                 @csrf
                 <div class="card-body">
                     <div class="row">
-                        <input type="text" name="category_id" id="category_id">
+                        <input type="hidden" name="category_id" id="category_id">
                         <div class="col-6">
                             <label>Product Name</label>
                             <select class="form-select" name="product_id" id="product_id">

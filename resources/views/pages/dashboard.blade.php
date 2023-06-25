@@ -62,10 +62,10 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="card-body">
-                        <div class="alert alert-success alert-dismissible">
+                        <div class="alert alert-info alert-dismissible">
                             <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
                             <h5><i class="icon fas fa-check"></i> Alert!</h5>
-                            Success alert preview. This alert is dismissable.
+                            Please accept the requested product!!
                         </div>
                     </div>
                 </div>
