@@ -34,7 +34,7 @@
                                     <br>
                                     <div class="row">
                                         <div class="col-4">
-                                            <label>Product Name</label>
+                                            <label>Issue Product </label>
                                             <select class="form-select" id="checkQuantity" disabled>
                                                 <option {{$data->admin_set_quantity == ISSUE_FULL_QUANTITY ? "selected" : ""}}>Issue Full Quantity</option>
                                                 <option {{$data->admin_set_quantity == ISSUE_PARTIAL_QUANTITY ? "selected" : ""}}>Issue Partial Quantity</option>
@@ -50,7 +50,7 @@
                                         </div>
                                         @if($data->admin_set_quantity == ISSUE_PARTIAL_QUANTITY)
                                             <div class="col-4 partialQuantityShow">
-                                                <label>Product Name</label>
+                                                <label>Product Quantity</label>
                                                 <input type="number" name="partial_quantity" class="form-control" placeholder="quantity" required>
                                             </div>
                                         @endif
